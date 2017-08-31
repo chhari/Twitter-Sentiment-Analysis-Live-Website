@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Twitter Sentiment Analysis</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/scrolling-nav.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <a class="navbar-brand" href="https://github.com/chhari"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="bg-primary text-white">
+        <div class="container text-center">
+            <h1>Twitter Sentiment Analysis</h1>
+            <p class="lead">See the live tweets that are being tweeted right now and their sentiment value</p>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>About Twitter sentiment analysis</h2>
+                    <p class="lead">Sentiment Analysis helps in determining how a certain individual or group responds to a specific thing or a topic. Usually, surveys are conducted to collect data and do statistical analysis. With Twitter, it works by deriving tweets containing references to the preferred topic, computing the sentiment polarity and strong points of each tweet, and then combining the results of all such tweets. A lot of companies make use this to gather public opinion on their service and products, and make data centric decisions.</p>
+
+                <form action="{{url_for('.success')}}" method="POST">
+                  <label>Type your Twitter trending word here         example: Google,Modi,Trump</label>
+                  <input class="form-control" id="phone" type="name" name="tweet_ip" placeholder="Twitter Word" required data-validation-required-message="Please enter your phone number.">
+                  <h2></h2>
+                  <button type="submit" class="btn btn-success btn-lg">Submit</button>
+                </form>
+                <h1></h1>
+                <div class="container">
+                        {%block content%}
+                        {%endblock%}
+                </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="services" class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>Other Projects</h2>
+                    <p class="lead">I am a student at Boston Univeristy completing my Masters in Computer Engineering  with specialisation ins Data Analytics and Mobile App Development,you can see my other projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+      <h2 class="text-center">Contact Me</h2>
+      <hr class="star-primary">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+          <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+          <form name="sentMessage" id="contactForm" novalidate>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <p>Hari Saran</p>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <p>chhari@bu.edu</p>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <p>8572949984</p>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <br>
+            <div id="success"></div>
+            <div class="form-group">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Hari Saran 2017</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/vendor/popper/popper.min.js"></script>
+    <script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="/static/js/scrolling-nav.js"></script>
+
+</body>
+
+</html>
